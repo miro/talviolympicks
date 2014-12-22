@@ -6,6 +6,4 @@ app.controller('landingController', [
 ) {
 
 	$scope.title = "jeah";
-	console.log('juuh');
-
 }]);

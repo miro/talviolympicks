@@ -2,4 +2,25 @@
 <div class="main-wrap" ng-controller="landingController">
     <h1>Talviolympicks</h1>
     <h3>jeah: {{title}}</h3>
+
+    <div class="countdown"></div>
 </div>
+
+
+<script>
+    // Ugly hack for initalizing the countdown timer
+    $(function() {
+
+        var now = moment();
+        var olympicksStartTime = moment('2015-01-23 15:00');
+        var duration = olympicksStartTime.diff(now, 'seconds', true);
+
+        var timer = $('div.countdown').FlipClock({
+            clockFace: 'DailyCounter',
+            countdown: true,
+            autoStart: false
+        });
+        timer.setTime(duration);
+        timer.start();
+    });
+</script>
