@@ -5,6 +5,8 @@ var filesDir = __dirname + '/app';
 var serverPort = process.env.PORT || 3000;
 
 app.configure(function() {
+    app.use(express.basicAuth('ihan', 'sama'));
+	
     app.use(express.static(filesDir));
 });
 
