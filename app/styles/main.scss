@@ -1,1 +1,28 @@
-h2 { color: red; }
+
+$black: #000;
+$white: #FFF;
+
+body {
+	background-color: $black;
+	color: $white;
+}
+
+.main-wrap {
+	width: 100%;
+	max-width: 960px;
+	display: block;
+
+	margin: 0 auto;
+}
+
+
+
+.countdown {
+	margin: 20px auto;
+	display: block;
+	max-width: 620px;
+
+	.flip-clock-label {
+		color: $white;
+	}
+}

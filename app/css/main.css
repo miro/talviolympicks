@@ -1,2 +1,16 @@
-h2 {
-  color: red; }
+body {
+  background-color: #000;
+  color: #FFF; }
+
+.main-wrap {
+  width: 100%;
+  max-width: 960px;
+  display: block;
+  margin: 0 auto; }
+
+.countdown {
+  margin: 20px auto;
+  display: block;
+  max-width: 620px; }
+  .countdown .flip-clock-label {
+    color: #FFF; }
