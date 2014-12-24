@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "talviolympicks ==============",
   "main": "server.js",
+  "engines": {
+    "node": "0.10.x"
+  },
   "scripts": {
     "postinstall": "cd app && bower install",
     "start": "node server.js"
