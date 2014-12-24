@@ -32,7 +32,7 @@ app.configure(function() {
     });
 });
 
-console.log('### Talvilympicks Backend started!');
+console.log('### Talviolympicks Backend started!');
 console.log('Serving static resources from', filesDir);
 
 app.listen(serverPort);
