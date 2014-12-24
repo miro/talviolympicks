@@ -1,5 +1,5 @@
 
-<div class="landing" ng-controller="landingController">
+<div class="landing" ng-controller="landingController" ng-init="init()">
     <h1>Talviolympicks</h1>
     <h3>jeah: {{title}}</h3>
 
@@ -10,6 +10,7 @@
 
 <script>
     // Ugly hack for initalizing the countdown timer
+    // This should have been done with a Directive, but oh wellll
     $(function() {
 
         var now = moment();
