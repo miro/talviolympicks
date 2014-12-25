@@ -1,7 +1,6 @@
 
-$black: #000;
-$white: #FFF;
-
+@import 'colors';
+@import 'clearfix';
 
 .bg { // Wrap for the picture background
     z-index: 1;
@@ -29,14 +28,4 @@ $white: #FFF;
     margin: 50px auto;
 }
 
-
-
-.countdown {
-    margin: 20px auto;
-    display: block;
-    max-width: 620px;
-
-    .flip-clock-label {
-        // color: $white;
-    }
-}
+@import 'landing';
