@@ -24,6 +24,7 @@ function latestPictures(cb) {
                 // Add image data to the return list
                 images.push({
                     link: item.link,
+                    lowResImageUrl: item.images.low_resolution.url, // "thumbnail" also exists
                     imageUrl: item.images.standard_resolution.url,
                     tags: item.tags,
                     likes: item.likes.count
