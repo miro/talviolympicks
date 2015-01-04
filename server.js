@@ -22,11 +22,10 @@ function sendJson(res) {
 
 
 app.configure(function() {
-    app.use(express.basicAuth('ihan', 'sama'));
-
+    // Serve static files
     app.use(express.static(filesDir));
 
-
+    // Serve our only API function
     app.get('/api/instagameFeed', function(req, res) {
         instagame.latestPictures(sendJson(res));
     });
