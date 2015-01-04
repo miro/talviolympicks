@@ -24,18 +24,20 @@
 <script>
     // Ugly hack for initalizing the countdown timer
     // This should have been done with a Directive, but oh wellll
-    $(function() {
+    function setCounter(startTimestampString) {
+        $(function() {
 
-        var now = moment();
-        var olympicksStartTime = moment('2015-01-23 15:00');
-        var duration = olympicksStartTime.diff(now, 'seconds', true);
+            var now = moment();
+            var startTime = moment(startTimestampString);
+            var duration = startTime.diff(now, 'seconds', true);
 
-        var timer = $('div.countdown').FlipClock({
-            clockFace: 'DailyCounter',
-            countdown: true,
-            autoStart: false
+            var timer = $('div.countdown').FlipClock({
+                clockFace: 'DailyCounter',
+                countdown: true,
+                autoStart: false
+            });
+            timer.setTime(duration);
+            timer.start();
         });
-        timer.setTime(duration);
-        timer.start();
-    });
+    }
 </script>

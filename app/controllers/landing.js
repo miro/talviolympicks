@@ -11,6 +11,11 @@ function(
 
 	$scope.init = function init() {
 
+		// Init the counter (through global scope)
+		setCounter('2015-01-23 15:00');
+
+
+		// Fetch Instagram photos
 		apiService.getInstagameFeed()
 		.then(
 			function success(data) {
