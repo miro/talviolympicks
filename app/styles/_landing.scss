@@ -142,9 +142,8 @@
         list-style: none;
 
         li {
-            cursor: pointer;
-            //box-shadow: inset 9px 0px 23px -3px rgba(0,0,0,0.75);
-
+            cursor: default;
+            
             float: left;
             padding: 10px 10px 10px 40px;
             margin: 0 10px 10px 0;
@@ -155,6 +154,10 @@
             background-position: 5px center;
             background-repeat: no-repeat;
             background-size: 25px 25px;
+
+            span.tag {
+                margin-right: 5px;
+            }
 
             span.count {
                 font-size: 20px;

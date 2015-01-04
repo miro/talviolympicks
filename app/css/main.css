@@ -131,7 +131,7 @@ body {
   .ig-info ul.tags {
     list-style: none; }
     .ig-info ul.tags li {
-      cursor: pointer;
+      cursor: default;
       float: left;
       padding: 10px 10px 10px 40px;
       margin: 0 10px 10px 0;
@@ -141,6 +141,8 @@ body {
       background-position: 5px center;
       background-repeat: no-repeat;
       background-size: 25px 25px; }
+      .ig-info ul.tags li span.tag {
+        margin-right: 5px; }
       .ig-info ul.tags li span.count {
         font-size: 20px;
         border-radius: 0 3px 3px 0;
