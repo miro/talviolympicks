@@ -2,14 +2,17 @@
     CLEARFIX HACK
     (http://nicolasgallagher.com/micro-clearfix-hack/)
 */
-.clearfix:before, .logo-wrap:before, .clearfix:after, .logo-wrap:after {
+.clearfix:before, .logo-wrap:before, .ig-wrap:before, .clearfix:after, .logo-wrap:after, .ig-wrap:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .logo-wrap:after {
+.clearfix:after, .logo-wrap:after, .ig-wrap:after {
   clear: both; }
+
+body {
+  background-color: #000; }
 
 .bg {
   z-index: 1;
@@ -61,6 +64,27 @@
       text-align: right; }
 
 .countdown {
-  margin: 20px auto;
+  margin: 50px auto 30px auto;
   display: block;
   max-width: 620px; }
+  .countdown .flip-clock-label {
+    font-size: 15px;
+    color: #FFF; }
+
+.ig-wrap .ig-img {
+  float: left;
+  width: 15%;
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  margin: 2% 2% 0 0;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+  .ig-wrap .ig-img img {
+    width: 100%;
+    height: 100%; }
+  .ig-wrap .ig-img:nth-child(6), .ig-wrap .ig-img:nth-child(12) {
+    margin-right: 0; }
+  .ig-wrap .ig-img:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.75); }

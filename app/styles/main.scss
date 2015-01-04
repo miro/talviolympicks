@@ -2,6 +2,11 @@
 @import 'colors';
 @import 'clearfix';
 
+
+body {
+    background-color: $black;
+}
+
 .bg { // Wrap for the picture background
     z-index: 1;
 
