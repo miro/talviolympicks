@@ -7,7 +7,7 @@ function(
 
 	$scope.images = [];
 	$scope.tags = {};
-	$scope.cumulativeLikes = null;
+	$scope.cumulativeLikes = 0;
 
 	$scope.init = function init() {
 

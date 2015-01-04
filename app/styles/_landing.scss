@@ -1,6 +1,4 @@
-.logo-wrap {
-    @extend .clearfix;
-    
+.tile {
     display: block;
     width: 100%;
     border-radius: 3px;
@@ -8,8 +6,12 @@
     box-shadow: 30px 30px 90px 3px rgba(0,0,0,0.75);
     background-color: $blue;
     color: $white;
+}
 
 
+.logo-wrap {
+    @extend .clearfix;
+    
     .logo {
         height: 300px;
         width: 48%;
@@ -87,4 +89,82 @@
             box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.75);
         }
     }
+}
+
+
+.ig-info {
+    @extend .clearfix;
+
+    margin-top: 40px;
+    // height: 80px;
+
+    .likes {
+        @extend .clearfix;
+
+        height: 100%;
+        float: left;
+        margin: 10px 20px;
+        padding-bottom: 15px;
+
+        .desc {
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+            height: 30%;
+        }
+        
+        .count {
+            margin: 0;
+            float: left;
+            font-size: 40px;
+            font-weight: bold;
+            display: block;
+            height: 70%;
+
+            .heart {
+                height: 40px;
+                width: 40px;
+                display: block;
+                float: left;
+                margin: 10px 10px 10px 0;
+
+                filter: invert(100%);
+
+                background-image: url(../img/heart.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+            }
+        }
+    }
+
+    ul.tags {
+        list-style: none;
+
+        li {
+            cursor: pointer;
+            //box-shadow: inset 9px 0px 23px -3px rgba(0,0,0,0.75);
+
+            float: left;
+            padding: 10px 10px 10px 40px;
+            margin: 0 10px 10px 0;
+            border-radius: 3px;
+            
+            background-color: $color-secondary-1-0;
+            background-image: url(../img/hashtag.png);
+            background-position: 5px center;
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+
+            span.count {
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                height: 100%;
+                background-color: $color-secondary-1-2;
+                padding: 12px;
+                margin: -12px -12px 0 0;
+            }
+        }
+    }
+
 }

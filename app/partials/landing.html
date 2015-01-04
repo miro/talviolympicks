@@ -1,6 +1,6 @@
 
 <div class="landing" ng-controller="landingController" ng-init="init()">
-    <div class="logo-wrap">
+    <div class="logo-wrap tile">
         <div class="logo"></div>
 
         <div class="info">
@@ -15,6 +15,17 @@
         <a class="ig-img" href="{{image.link}}" target="_blank" ng-repeat="image in images">
             <img src="{{image.thumbnailUrl}}" />
         </a>
+    </div>
+
+    <div class="ig-info tile">
+        <div class="likes">
+            <p class="desc">Amount of love:</p>
+            <p class="count"><span class="heart"></span>{{cumulativeLikes}}</p>
+        </div>
+
+        <ul class="tags">
+            <li ng-repeat="(tag, count) in tags">{{tag}} <span class="count">{{count}}</span></li>
+        </ul>
     </div>
 
 </div>
