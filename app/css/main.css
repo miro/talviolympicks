@@ -1,0 +1,152 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/* Palette URL: http://paletton.com/#uid=54n0u0kYpnmSxDVWIsGZ6hZZObt */
+/* Main Primary color aka $blue */
+/* Main Secondary color (1) */
+/* Main Secondary color (2) */
+/*
+    CLEARFIX HACK
+    (http://nicolasgallagher.com/micro-clearfix-hack/)
+*/
+.clearfix:before, .logo-wrap:before, .ig-wrap:before, .ig-info:before, .ig-info .likes:before, .clearfix:after, .logo-wrap:after, .ig-wrap:after, .ig-info:after, .ig-info .likes:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after, .logo-wrap:after, .ig-wrap:after, .ig-info:after, .ig-info .likes:after {
+  clear: both; }
+
+body {
+  background-color: #230162;
+  font-family: 'Open Sans', sans-serif; }
+
+.bg {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(../img/bgimg.jpg);
+  background-attachment: fixed; }
+
+.main-wrap {
+  z-index: 2;
+  width: 100%;
+  max-width: 960px;
+  display: block;
+  position: relative;
+  margin: 50px auto; }
+
+.tile {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 30px 30px 90px 3px rgba(0, 0, 0, 0.75);
+  background-color: #3D218F;
+  color: #FFF; }
+
+.logo-wrap .logo {
+  height: 300px;
+  width: 48%;
+  float: left;
+  background-image: url(../img/logo-full.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+.logo-wrap .info {
+  margin: 20px auto;
+  float: left;
+  width: 48%;
+  border-left: 2px solid #FFF; }
+  .logo-wrap .info .logo-text {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/logo-text.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; }
+  .logo-wrap .info p {
+    text-align: right; }
+
+.countdown {
+  margin: 50px auto 30px auto;
+  display: block;
+  max-width: 620px; }
+  .countdown .flip-clock-label {
+    font-size: 15px;
+    color: #FFF; }
+
+.ig-wrap .ig-img {
+  float: left;
+  width: 15%;
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  margin: 2% 2% 0 0;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+  .ig-wrap .ig-img img {
+    width: 100%;
+    height: 100%; }
+  .ig-wrap .ig-img:nth-child(6), .ig-wrap .ig-img:nth-child(12) {
+    margin-right: 0; }
+  .ig-wrap .ig-img:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.75); }
+
+.ig-info {
+  margin-top: 40px; }
+  .ig-info .likes {
+    height: 100%;
+    float: left;
+    margin: 10px 20px;
+    padding-bottom: 15px; }
+    .ig-info .likes .desc {
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+      height: 30%; }
+    .ig-info .likes .count {
+      margin: 0;
+      float: left;
+      font-size: 40px;
+      font-weight: bold;
+      display: block;
+      height: 70%; }
+      .ig-info .likes .count .heart {
+        height: 40px;
+        width: 40px;
+        display: block;
+        float: left;
+        margin: 10px 10px 10px 0;
+        -webkit-filter: invert(100%);
+                filter: invert(100%);
+        background-image: url(../img/heart.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain; }
+  .ig-info ul.tags {
+    list-style: none; }
+    .ig-info ul.tags li {
+      cursor: default;
+      float: left;
+      padding: 10px 10px 10px 40px;
+      margin: 0 10px 10px 0;
+      border-radius: 3px;
+      background-color: #65007B;
+      background-image: url(../img/hashtag.png);
+      background-position: 5px center;
+      background-repeat: no-repeat;
+      background-size: 25px 25px; }
+      .ig-info ul.tags li span.tag {
+        margin-right: 5px; }
+      .ig-info ul.tags li span.count {
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        height: 100%;
+        background-color: #7C0197;
+        padding: 12px;
+        margin: -12px -12px 0 0; }

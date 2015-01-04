@@ -1,0 +1,54 @@
+
+<div class="landing" ng-controller="landingController" ng-init="init()">
+    <div class="logo-wrap tile">
+        <div class="logo"></div>
+
+        <div class="info">
+            <div class="logo-text"></div>
+            <p>Enemmän, Pidempään, Rumemmin.</p>
+        </div>
+    </div>
+
+    <div class="countdown"></div>
+
+    <div class="ig-wrap">
+        <a class="ig-img" href="{{image.link}}" target="_blank" ng-repeat="image in images">
+            <img src="{{image.thumbnailUrl}}" />
+        </a>
+    </div>
+
+    <div class="ig-info tile">
+        <div class="likes">
+            <p class="desc">Amount of love:</p>
+            <p class="count"><span class="heart"></span>{{cumulativeLikes}}</p>
+        </div>
+
+        <ul class="tags">
+            <li ng-repeat="(tag, count) in tags"><span class="tag">{{tag}}</span> <span class="count">{{count}}</span></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+<script>
+    // Ugly hack for initalizing the countdown timer
+    // This should have been done with a Directive, but oh wellll
+    function setCounter(startTimestampString) {
+        $(function() {
+
+            var now = moment();
+            var startTime = moment(startTimestampString);
+            var duration = startTime.diff(now, 'seconds', true);
+
+            var timer = $('div.countdown').FlipClock({
+                clockFace: 'DailyCounter',
+                countdown: true,
+                autoStart: false
+            });
+            timer.setTime(duration);
+            timer.start();
+        });
+    }
+</script>
