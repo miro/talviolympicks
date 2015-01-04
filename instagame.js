@@ -6,11 +6,9 @@ var _           = require('lodash');
 var clientId = process.env.TO_INSTAGRAM_CLIENTID; // user key to your Instagram app
 var userId = 1573517626; // user id for IG user whos images we are fetching. this one is @talviolympicksofficial
 
-console.log(clientId);
-
 function latestPictures(cb) {
 
-    request('https://api.instagram.com/v1/users/' + userId + '/media/recent?count=50&client_id=' + clientId,
+    request('https://api.instagram.com/v1/users/' + userId + '/media/recent?count=12&client_id=' + clientId,
         function (error, response, body) {
             if (error) sendJson(error);
 
@@ -24,7 +22,8 @@ function latestPictures(cb) {
                 // Add image data to the return list
                 images.push({
                     link: item.link,
-                    lowResImageUrl: item.images.low_resolution.url, // "thumbnail" also exists
+                    thumbnailUrl: item.images.thumbnail.url,
+                    lowResImageUrl: item.images.low_resolution.url,
                     imageUrl: item.images.standard_resolution.url,
                     tags: item.tags,
                     likes: item.likes.count
