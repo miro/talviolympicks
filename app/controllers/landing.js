@@ -12,7 +12,7 @@ function(
 	$scope.init = function init() {
 
 		// Init the counter (through global scope)
-		setCounter('2015-01-23 15:00');
+		setCounter('2016-01-22 15:00');
 
 
 		// Fetch Instagram photos
