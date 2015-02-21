@@ -66,7 +66,7 @@ body {
 .countdown {
   margin: 50px auto 30px auto;
   display: block;
-  max-width: 620px;
+  max-width: 690px;
   width: 100%; }
   .countdown .flip-clock-label {
     font-size: 15px;
@@ -74,28 +74,28 @@ body {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .countdown {
-    margin-left: 20%;
+    margin-left: 10%;
     margin-bottom: 20px;
     width: 130%;
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7); }
+    -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6); }
  }
 
 @media (max-width: 480px) {
   .countdown {
     margin-bottom: 10px;
     margin-left: 10%;
-    width: 200%;
+    width: 220%;
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    -webkit-transform: scale(0.45);
-        -ms-transform: scale(0.45);
-            transform: scale(0.45); }
+    -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+            transform: scale(0.4); }
  }
 
 .ig-wrap .ig-img {
