@@ -40,7 +40,7 @@ function(
                 { time: '9.00', title: 'Aamupalabrunssi', place: 'Kisakylän päärakennus' },
                 { time: '11.45', title: 'Kisojen avajaisfanfaari' },
                 { time: '12.00', title: 'Avauslaji: Kaljakorin heitto', place: 'Kuirila Olympick Center', icon: 'kaljakori' },
-                { time: '13.00', title: 'Ampumahiihto', place: 'Biathlon Stadium Kiviranta', icon: 'biathlon' },
+                { time: '13.00', title: 'Ampumahiihto', place: 'Biathlon Stadium Stonebeach', icon: 'biathlon' },
                 { time: '14.00', title: '30m Kalja', place: 'Terrafame Environment Arena', icon: '30m-beer' },
                 { time: '15.00', title: 'Mäkihyppy K10', place: 'Garmisch-Ramppankirchen', icon: 'makihyppy' },
                 { time: '17.00', title: 'Palkintojen jako ja Marathonsauna', place: 'Lempi savusauna', icon: 'palkintojenjako' }
@@ -50,7 +50,7 @@ function(
         {
             date: 'Sunnuntai 24.1',
             events: [
-                { time: '01.00', title: 'Voittajien lehdistötilaisuus', place: 'Anniskeluravintola Kantis' },
+                { time: '01.00', title: 'Mitalistien lehdistötilaisuus', place: 'Anniskeluravintola Kantis' },
                 { time: '9.00', title: 'Palauttelubrunssi', place: 'Kisakylän päärakennus' },
                 { time: '12.00', title: 'Päätöspalaveri' },
                 { time: '13.00', title: 'Järjestelytoimikunta' },
