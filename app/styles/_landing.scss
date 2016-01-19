@@ -116,7 +116,6 @@
     @extend .clearfix;
 
     margin-top: 40px;
-    // height: 80px;
 
     .likes {
         @extend .clearfix;
@@ -169,7 +168,7 @@
             margin: 0 10px 10px 0;
             border-radius: 3px;
             
-            background-color: $color-secondary-1-0;
+            background-color: $red;
             background-image: url(../img/hashtag.png);
             background-position: 5px center;
             background-repeat: no-repeat;
@@ -183,7 +182,7 @@
                 font-size: 20px;
                 border-radius: 0 3px 3px 0;
                 height: 100%;
-                background-color: $color-secondary-1-2;
+                background-color: darken($red, 10%);
                 padding: 12px;
                 margin: -12px -12px 0 0;
             }
