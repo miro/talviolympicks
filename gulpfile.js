@@ -1,7 +1,6 @@
 var gulp         = require('gulp');
 var sass         = require('gulp-sass');
 var webserver    = require('gulp-webserver');
-var livereload   = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 var del          = require('del');
 
@@ -13,12 +12,10 @@ gulp.task('sass', function() {
     gulp.src('./app/styles/*.scss')
     .pipe(sass({ errLogToConsole: true }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./app/css'))
-    .pipe(livereload());
+    .pipe(gulp.dest('./app/css'));
 });
 
 gulp.task('watch', function() {
-    livereload.listen();
     gulp.watch('./app/styles/*.scss', ['sass']);
 });
 
