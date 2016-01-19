@@ -11,8 +11,13 @@ function(
 
 	$scope.init = function init() {
 
-		// Init the counter (through global scope)
-		setCounter('2016-01-22 15:00');
+		// Init the flipclockcounter (through global scope)
+		var START_TIME = '2016-01-22 15:00';
+		if (moment().isBefore(moment(START_TIME))) {
+			// show the counter only if the start time is in the future
+			// (the flipclock kind of explodes otherwise)
+			setCounter(START_TIME);
+		}
 
 
 		// Fetch Instagram photos
