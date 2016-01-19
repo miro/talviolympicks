@@ -1,13 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-/* Palette URL: http://paletton.com/#uid=54n0u0kYpnmSxDVWIsGZ6hZZObt */
-/* Main Primary color aka $blue */
-/* Main Secondary color (1) */
-/* Main Secondary color (2) */
 /*
     CLEARFIX HACK
     (http://nicolasgallagher.com/micro-clearfix-hack/)
 */
-.clearfix:before, .logo-wrap:before, .ig-wrap:before, .ig-info:before, .ig-info .likes:before, .clearfix:after, .logo-wrap:after, .ig-wrap:after, .ig-info:after, .ig-info .likes:after {
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600italic);
+.clearfix:before, .logo-wrap:before, .ig-wrap:before, .ig-info:before, .ig-info .likes:before,
+.clearfix:after,
+.logo-wrap:after,
+.ig-wrap:after,
+.ig-info:after,
+.ig-info .likes:after {
   content: " ";
   /* 1 */
   display: table;
@@ -21,7 +22,7 @@ html {
   background-size: cover; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Titillium Web', sans-serif; }
 
 .main-wrap {
   z-index: 2;
@@ -36,7 +37,7 @@ body {
   width: 100%;
   border-radius: 3px;
   box-shadow: 30px 30px 90px 3px rgba(0, 0, 0, 0.75);
-  background-color: #3D218F;
+  background-color: #027B7F;
   color: #FFF; }
 
 .logo-wrap .logo {
@@ -47,11 +48,18 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; }
+  @media (max-width: 768px) {
+    .logo-wrap .logo {
+      width: 100%; } }
+
 .logo-wrap .info {
   margin: 20px auto;
   float: left;
   width: 48%;
   border-left: 2px solid #FFF; }
+  @media (max-width: 768px) {
+    .logo-wrap .info {
+      display: none; } }
   .logo-wrap .info .logo-text {
     margin-top: 20px;
     width: 100%;
@@ -66,7 +74,7 @@ body {
 .countdown {
   margin: 50px auto 30px auto;
   display: block;
-  max-width: 690px;
+  max-width: 620px;
   width: 100%; }
   .countdown .flip-clock-label {
     font-size: 15px;
@@ -74,29 +82,23 @@ body {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .countdown {
-    margin-left: 10%;
+    margin-left: 20%;
     margin-bottom: 20px;
     width: 130%;
     -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    -webkit-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-            transform: scale(0.6); }
- }
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); } }
 
 @media (max-width: 480px) {
   .countdown {
     margin-bottom: 10px;
     margin-left: 10%;
-    width: 220%;
+    width: 200%;
     -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    -webkit-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-            transform: scale(0.4); }
- }
+    -webkit-transform: scale(0.45);
+            transform: scale(0.45); } }
 
 .ig-wrap .ig-img {
   float: left;
@@ -104,7 +106,7 @@ body {
   box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
   margin: 2% 2% 0 0;
   -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out; }
   .ig-wrap .ig-img img {
     width: 100%;
     height: 100%; }
@@ -112,7 +114,6 @@ body {
     margin-right: 0; }
   .ig-wrap .ig-img:hover {
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
             transform: scale(1.1);
     box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.75); }
 
@@ -155,7 +156,7 @@ body {
       padding: 10px 10px 10px 40px;
       margin: 0 10px 10px 0;
       border-radius: 3px;
-      background-color: #65007B;
+      background-color: #A82D20;
       background-image: url(../img/hashtag.png);
       background-position: 5px center;
       background-repeat: no-repeat;
@@ -166,6 +167,109 @@ body {
         font-size: 20px;
         border-radius: 0 3px 3px 0;
         height: 100%;
-        background-color: #7C0197;
+        background-color: #7d2218;
         padding: 12px;
         margin: -12px -12px 0 0; }
+
+.schedule__wrapper {
+  font-size: 20px;
+  color: #FFF; }
+  .schedule__wrapper .day__wrapper {
+    margin-bottom: 40px; }
+  .schedule__wrapper .day__date {
+    background-color: #A82D20;
+    color: #FFF;
+    display: inline;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 25px; }
+  .schedule__wrapper .event__wrapper {
+    background-color: #027B7F;
+    padding: 2px 0;
+    border-bottom: 1px solid #026366; }
+  .schedule__wrapper .event__time {
+    text-align: right;
+    color: #000;
+    font-weight: bold;
+    display: inline-block;
+    width: 60px;
+    padding: 0 5px; }
+  .schedule__wrapper .event__title {
+    display: inline-block;
+    vertical-align: middle; }
+  .schedule__wrapper .event__wrapper--place {
+    overflow: hidden;
+    position: relative;
+    height: 80px;
+    margin: 10px 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    box-shadow: 10px 10px 48px 1px rgba(0, 0, 0, 0.75); }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__wrapper--place {
+        height: 50px; } }
+    .schedule__wrapper .event__wrapper--place .event__time {
+      width: 70px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #572E4F;
+      color: #FFF;
+      vertical-align: middle;
+      text-align: center;
+      padding: 15px;
+      height: 80px;
+      display: block;
+      font-size: 30px; }
+      @media (max-width: 768px) {
+        .schedule__wrapper .event__wrapper--place .event__time {
+          padding: 10px 20px 10px 10px;
+          font-size: 20px;
+          width: 40px; } }
+    .schedule__wrapper .event__wrapper--place .event__title {
+      position: absolute;
+      top: 0;
+      left: 100px;
+      padding-left: 10px;
+      font-size: 35px; }
+      @media (max-width: 768px) {
+        .schedule__wrapper .event__wrapper--place .event__title {
+          left: 80px;
+          font-size: 20px; } }
+  .schedule__wrapper .event__place {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 100px;
+    background-color: #572E4F;
+    font-weight: 600;
+    font-style: italic;
+    padding-left: 10px; }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__place {
+        font-size: 14px;
+        left: 70px; } }
+  .schedule__wrapper .event__wrapper--icon .event__icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 10px; }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__wrapper--icon .event__icon {
+        left: 70px;
+        width: 50px;
+        margin: 0; } }
+  .schedule__wrapper .event__wrapper--icon .event__title,
+  .schedule__wrapper .event__wrapper--icon .event__place {
+    left: 220px; }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__wrapper--icon .event__title,
+      .schedule__wrapper .event__wrapper--icon .event__place {
+        left: 120px; } }

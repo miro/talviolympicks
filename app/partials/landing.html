@@ -11,9 +11,30 @@
 
     <div class="countdown"></div>
 
+    <div class="schedule__wrapper">
+        <section class="day__wrapper" ng-repeat="day in schedule">
+            <div class="day__date">{{day.date}}</div>
+
+            <div class="event__wrapper"
+                ng-repeat="event in day.events"
+                ng-class="{'event__wrapper--place': event.place, 'event__wrapper--icon': event.icon}"
+            >
+                <div class="event__time">{{event.time}}</div>
+
+                <div
+                    ng-show="event.icon"
+                    ng-style="{'background-image': 'url(../img/symbols/' + event.icon + '.png)'}"
+                    class="event__icon" ></div>
+
+                <div class="event__title">{{event.title}}</div>
+                <div class="event__place" ng-show="event.place">{{event.place}}</div>
+            </div>
+        </section>
+    </div>
+
     <div class="ig-wrap">
         <a class="ig-img" href="{{image.link}}" target="_blank" ng-repeat="image in images">
-            <img src="{{image.thumbnailUrl}}" />
+            <img ng-src="{{image.thumbnailUrl}}" />
         </a>
     </div>
 

@@ -1,10 +1,10 @@
 {
   "name": "talviolympicks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "talviolympicks ==============",
   "main": "server.js",
   "engines": {
-    "node": "0.10.x"
+    "node": "5.3.x"
   },
   "scripts": {
     "postinstall": "cd app && bower install",
@@ -20,18 +20,17 @@
   },
   "homepage": "https://github.com/miro/talviolympicks",
   "dependencies": {
-    "express": "~3.3.5",
-    "request": "~2.51.0",
-    "bluebird": "~2.4.2",
-    "bower": "~1.3.12",
-    "lodash": "~2.4.1"
+    "bluebird": "^3.1.1",
+    "bower": "^1.7.2",
+    "express": "^4.13.3",
+    "lodash": "^4.0.0",
+    "request": "^2.67.0"
   },
   "devDependencies": {
-    "gulp": "~3.8.10",
-    "gulp-webserver": "~0.9.0",
-    "gulp-sass": "~1.2.4",
-    "del": "~1.1.0",
-    "gulp-livereload": "~3.0.2",
-    "gulp-autoprefixer": "~2.0.0"
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-webserver": "*"
   }
 }

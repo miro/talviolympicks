@@ -11,12 +11,15 @@
 
 .logo-wrap {
     @extend .clearfix;
-    
+
     .logo {
         height: 300px;
         width: 48%;
         float: left;
 
+        @include viewports(up-to small) {
+            width: 100%;
+        }
 
         background-image: url(../img/logo-full.png);
         background-repeat: no-repeat;
@@ -25,12 +28,15 @@
     }
 
     .info {
+        @include viewports(up-to small) {
+            display: none;
+        }
+
         margin: 20px auto;
         float: left;
         width: 48%;
 
         border-left: 2px solid $white;
-
 
         .logo-text {
             margin-top: 20px;
@@ -54,7 +60,7 @@
 .countdown {
     margin: 50px auto 30px auto;
     display: block;
-    max-width: 690px;
+    max-width: 620px;
     width: 100%;
 
     .flip-clock-label {
@@ -63,22 +69,22 @@
     }
 }
 
-@include viewports(small) { 
+@include viewports(small) {
     .countdown {
-        margin-left: 10%;
+        margin-left: 20%;
         margin-bottom: 20px;
         width: 130%;
         transform-origin: 0 0;
-        transform: scale(.6);
+        transform: scale(.7);
     }
 }
-@include viewports(tiny) { 
+@include viewports(tiny) {
     .countdown {
         margin-bottom: 10px;
         margin-left: 10%;
-        width: 220%;
+        width: 200%;
         transform-origin: 0 0;
-        transform: scale(.4);
+        transform: scale(.45);
     }
 }
 
@@ -103,8 +109,8 @@
         }
 
         // Mouseover popup efect
-        transition: all 0.2s ease-in-out; 
-        &:hover { 
+        transition: all 0.2s ease-in-out;
+        &:hover {
             transform: scale(1.1);
             box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.75);
         }
@@ -116,7 +122,6 @@
     @extend .clearfix;
 
     margin-top: 40px;
-    // height: 80px;
 
     .likes {
         @extend .clearfix;
@@ -132,7 +137,7 @@
             margin: 0;
             height: 30%;
         }
-        
+
         .count {
             margin: 0;
             float: left;
@@ -163,13 +168,13 @@
 
         li {
             cursor: default;
-            
+
             float: left;
             padding: 10px 10px 10px 40px;
             margin: 0 10px 10px 0;
             border-radius: 3px;
-            
-            background-color: $color-secondary-1-0;
+
+            background-color: $red;
             background-image: url(../img/hashtag.png);
             background-position: 5px center;
             background-repeat: no-repeat;
@@ -183,7 +188,7 @@
                 font-size: 20px;
                 border-radius: 0 3px 3px 0;
                 height: 100%;
-                background-color: $color-secondary-1-2;
+                background-color: darken($red, 10%);
                 padding: 12px;
                 margin: -12px -12px 0 0;
             }

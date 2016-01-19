@@ -4,7 +4,7 @@ var app             = express();
 var instagame       = require('./instagame');
 
 var filesDir = __dirname + '/app';
-var serverPort = process.env.PORT || 3000;
+var serverPort = process.env.PORT || 9500;
 
 
 function sendJson(res) {
@@ -21,15 +21,14 @@ function sendJson(res) {
 
 
 
-app.configure(function() {
-    // Serve static files
-    app.use(express.static(filesDir));
+// Serve static files
+app.use(express.static(filesDir));
 
-    // Serve our only API function
-    app.get('/api/instagameFeed', function(req, res) {
-        instagame.latestPictures(sendJson(res));
-    });
+// Serve our only API function
+app.get('/api/instagameFeed', function(req, res) {
+    instagame.latestPictures(sendJson(res));
 });
+
 
 console.log('### Talviolympicks Backend started!');
 console.log('Serving static resources from', filesDir);

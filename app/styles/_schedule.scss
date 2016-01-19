@@ -1,0 +1,153 @@
+.schedule__wrapper {
+    font-size: 20px;
+    color: $white;
+
+    .day__wrapper {
+        margin-bottom: 40px;
+    }
+
+    .day__date {
+        background-color: $red;
+        color: $white;
+
+        display: inline;
+        padding: 0 10px;
+
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .event__wrapper {
+        background-color: $blue;
+        padding: 2px 0;
+        border-bottom: 1px solid darken($blue, 5%);
+    }
+
+    .event__time {
+        text-align: right;
+        color: $black;
+        font-weight: bold;
+        display: inline-block;
+
+        width: 60px;
+        padding: 0 5px;
+    }
+
+    .event__title {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    // # Special styles if the event has a place
+    .event__wrapper--place {
+        overflow: hidden;
+        position: relative;
+
+        height: 80px;
+
+        margin: 10px 0;
+        padding-bottom: 0;
+        border-bottom: none;
+
+        box-shadow: 10px 10px 48px 1px rgba(0,0,0,0.75);
+
+        @include viewports(up-to small) {
+            height: 50px;
+        }
+
+        .event__time {
+            width: 70px;
+            height: 100px;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            background-color: $purple;
+            color: $white;
+            vertical-align: middle;
+            text-align: center;
+
+            padding: 15px;
+            height: 80px;
+            display: block;
+
+            font-size: 30px;
+
+            @include viewports(up-to small) {
+                padding: 10px 20px 10px 10px;
+                font-size: 20px;
+                width: 40px;
+            }
+        }
+
+        .event__title {
+            position: absolute;
+            top: 0;
+            left: 100px;
+            padding-left: 10px;
+            font-size: 35px;
+
+            @include viewports(up-to small) {
+                left: 80px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .event__place {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 100px;
+
+        background-color: $purple;
+
+        font-weight: 600;
+        font-style: italic;
+
+        padding-left: 10px;
+
+        @include viewports(up-to small) {
+            font-size: 14px;
+            left: 70px;
+        }
+
+    }
+
+    // # Special (hack) styles if the event has icon
+    .event__wrapper--icon {
+        .event__icon {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100px;
+            width: 100px;
+            // height: 80px;
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 10px;
+
+            @include viewports(up-to small) {
+                left: 70px;
+                width: 50px;
+                margin: 0;
+            }
+
+        }
+
+
+        .event__title,
+        .event__place {
+            left: 220px;
+
+            @include viewports(up-to small) {
+                left: 120px;
+            }
+        }
+    }
+}

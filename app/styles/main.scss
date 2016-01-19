@@ -3,7 +3,7 @@
 @import 'clearfix';
 @import 'viewports';
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600italic);
 
 html {
     background: url(../img/bgimg.jpg) no-repeat center center fixed;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 
@@ -28,3 +28,4 @@ body {
 }
 
 @import 'landing';
+@import 'schedule';
