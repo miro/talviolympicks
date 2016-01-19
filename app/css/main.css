@@ -2,7 +2,7 @@
     CLEARFIX HACK
     (http://nicolasgallagher.com/micro-clearfix-hack/)
 */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600italic);
 .clearfix:before, .logo-wrap:before, .ig-wrap:before, .ig-info:before, .ig-info .likes:before,
 .clearfix:after,
 .logo-wrap:after,
@@ -22,7 +22,7 @@ html {
   background-size: cover; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Titillium Web', sans-serif; }
 
 .main-wrap {
   z-index: 2;
@@ -164,3 +164,106 @@ body {
         background-color: #7d2218;
         padding: 12px;
         margin: -12px -12px 0 0; }
+
+.schedule__wrapper {
+  font-size: 20px;
+  color: #FFF; }
+  .schedule__wrapper .day__wrapper {
+    margin-bottom: 40px; }
+  .schedule__wrapper .day__date {
+    background-color: #A82D20;
+    color: #FFF;
+    display: inline;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 25px; }
+  .schedule__wrapper .event__wrapper {
+    background-color: #027B7F;
+    padding: 2px 0;
+    border-bottom: 1px solid #026366; }
+  .schedule__wrapper .event__time {
+    text-align: right;
+    color: #000;
+    font-weight: bold;
+    display: inline-block;
+    width: 60px;
+    padding: 0 5px; }
+  .schedule__wrapper .event__title {
+    display: inline-block;
+    vertical-align: middle; }
+  .schedule__wrapper .event__wrapper--place {
+    overflow: hidden;
+    position: relative;
+    height: 80px;
+    margin: 10px 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    box-shadow: 10px 10px 48px 1px rgba(0, 0, 0, 0.75); }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__wrapper--place {
+        height: 50px; } }
+    .schedule__wrapper .event__wrapper--place .event__time {
+      width: 70px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #572E4F;
+      color: #FFF;
+      vertical-align: middle;
+      text-align: center;
+      padding: 15px;
+      height: 80px;
+      display: block;
+      font-size: 30px; }
+      @media (max-width: 768px) {
+        .schedule__wrapper .event__wrapper--place .event__time {
+          padding: 10px 15px;
+          font-size: 20px;
+          width: 40px; } }
+    .schedule__wrapper .event__wrapper--place .event__title {
+      position: absolute;
+      top: 0;
+      left: 100px;
+      padding-left: 10px;
+      font-size: 35px; }
+      @media (max-width: 768px) {
+        .schedule__wrapper .event__wrapper--place .event__title {
+          left: 80px;
+          font-size: 20px; } }
+  .schedule__wrapper .event__place {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 100px;
+    background-color: #572E4F;
+    font-weight: 600;
+    font-style: italic;
+    padding-left: 10px; }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__place {
+        font-size: 14px;
+        left: 70px; } }
+  .schedule__wrapper .event__wrapper--icon .event__icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 10px; }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__wrapper--icon .event__icon {
+        left: 70px;
+        width: 50px;
+        margin: 0; } }
+  .schedule__wrapper .event__wrapper--icon .event__title,
+  .schedule__wrapper .event__wrapper--icon .event__place {
+    left: 220px; }
+    @media (max-width: 768px) {
+      .schedule__wrapper .event__wrapper--icon .event__title,
+      .schedule__wrapper .event__wrapper--icon .event__place {
+        left: 120px; } }
