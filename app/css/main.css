@@ -48,12 +48,18 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; }
+  @media (max-width: 768px) {
+    .logo-wrap .logo {
+      width: 100%; } }
 
 .logo-wrap .info {
   margin: 20px auto;
   float: left;
   width: 48%;
   border-left: 2px solid #FFF; }
+  @media (max-width: 768px) {
+    .logo-wrap .info {
+      display: none; } }
   .logo-wrap .info .logo-text {
     margin-top: 20px;
     width: 100%;
@@ -219,7 +225,7 @@ body {
       font-size: 30px; }
       @media (max-width: 768px) {
         .schedule__wrapper .event__wrapper--place .event__time {
-          padding: 10px 15px;
+          padding: 10px 20px 10px 10px;
           font-size: 20px;
           width: 40px; } }
     .schedule__wrapper .event__wrapper--place .event__title {

@@ -11,12 +11,15 @@
 
 .logo-wrap {
     @extend .clearfix;
-    
+
     .logo {
         height: 300px;
         width: 48%;
         float: left;
 
+        @include viewports(up-to small) {
+            width: 100%;
+        }
 
         background-image: url(../img/logo-full.png);
         background-repeat: no-repeat;
@@ -25,12 +28,15 @@
     }
 
     .info {
+        @include viewports(up-to small) {
+            display: none;
+        }
+
         margin: 20px auto;
         float: left;
         width: 48%;
 
         border-left: 2px solid $white;
-
 
         .logo-text {
             margin-top: 20px;
@@ -63,7 +69,7 @@
     }
 }
 
-@include viewports(small) { 
+@include viewports(small) {
     .countdown {
         margin-left: 20%;
         margin-bottom: 20px;
@@ -72,7 +78,7 @@
         transform: scale(.7);
     }
 }
-@include viewports(tiny) { 
+@include viewports(tiny) {
     .countdown {
         margin-bottom: 10px;
         margin-left: 10%;
@@ -103,8 +109,8 @@
         }
 
         // Mouseover popup efect
-        transition: all 0.2s ease-in-out; 
-        &:hover { 
+        transition: all 0.2s ease-in-out;
+        &:hover {
             transform: scale(1.1);
             box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.75);
         }
@@ -131,7 +137,7 @@
             margin: 0;
             height: 30%;
         }
-        
+
         .count {
             margin: 0;
             float: left;
@@ -162,12 +168,12 @@
 
         li {
             cursor: default;
-            
+
             float: left;
             padding: 10px 10px 10px 40px;
             margin: 0 10px 10px 0;
             border-radius: 3px;
-            
+
             background-color: $red;
             background-image: url(../img/hashtag.png);
             background-position: 5px center;
