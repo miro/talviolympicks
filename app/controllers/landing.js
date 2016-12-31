@@ -10,7 +10,8 @@ function(
     $scope.tags = {};
     $scope.cumulativeLikes = 0;
 
-    $scope.schedule = [
+    $scope.schedule = [];
+    $scope.oldSchedule = [
         {
             date: 'Torstai 21.1',
             events: [
@@ -64,7 +65,7 @@ function(
     $scope.init = function init() {
 
         // Init the flipclockcounter (through global scope)
-        var START_TIME = '2016-01-22 15:00';
+        var START_TIME = '2017-01-27 16:00';
         if (moment().isBefore(moment(START_TIME))) {
             // show the counter only if the start time is in the future
             // (the flipclock kind of explodes otherwise)
