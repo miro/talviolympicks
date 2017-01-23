@@ -10,53 +10,48 @@ function(
     $scope.tags = {};
     $scope.cumulativeLikes = 0;
 
-    $scope.schedule = [];
-    $scope.oldSchedule = [
+    $scope.schedule = [
         {
-            date: 'Torstai 21.1',
+            date: 'Friday 27.1.',
             events: [
-                { time: '18.00', title: 'Kisakylä aukeaa' },
-                { time: '', title: 'Talkooväen ilmottautuminen' },
-                { time: '', title: 'Majoituspakettien lunastus' },
-                { time: '20.00', title: 'Talkooväen käskynjakosauna' }
+                { time: '11.00', title: 'Hotel check-in' },
+                { time: '12.00', title: 'Olympicks Village opens' },
+                { time: '13.00', title: 'Athlete Accredation', place: 'Event Centre 1' },
+                { time: '18.00', title: 'Olympicks-Sauna opens' },
+                { time: '21.00', title: 'Talviolympicks MMXVII Opening Ceremony', place: 'Biathlon Stadium Stonebeach' },
+                { time: '23.00', title: 'Panel Discussion + Coctail Event', place: 'Restaurant Kanta Krouvi' }
             ]
         },
 
         {
-            date: 'Perjantai 22.1 ',
+            date: 'Saturday 28.1',
             events: [
-                { time: '12.00', title: 'Akklimatisoituminen alppimajalla' },
-                { time: '15.00', title: 'Atleettien akkredointi' },
-                { time: '', title: 'Kisapassien nouto' },
-                { time: '18.00', title: 'Tervetulolöylyt', place: 'Lempi puusauna' },
-                { time: '20.50', title: 'Olympicks-tulen sytytys' },
-                { time: '20.55', title: 'Olympicks-atleetin vala' },
-                { time: '21.00', title: 'Alkusanat + cocktail-tilaisuus' }
-            ]
-        },
+                { time: '09.00', title: 'Breakfast', place: 'Ramppa\'s Steak House' },
+                { time: '10.00', title: 'Athlete Assembly Meeting', place: 'Conference Room 3' },
+                { time: '10.55', title: 'Olympicks Anthem and Athletes\' Oath', place: 'Biathlon Stadium Stonebeach' },
 
-        {
-            date: 'Lauantai 23.1',
-            events: [
-                { time: '9.00', title: 'Aamupalabrunssi', place: 'Kisakylän päärakennus' },
-                { time: '11.45', title: 'Kisojen avajaisfanfaari' },
-                { time: '12.00', title: 'Avauslaji: Kaljakorin heitto', place: 'Kuirila Olympick Center', icon: 'kaljakori' },
-                { time: '13.00', title: 'Ampumahiihto', place: 'Biathlon Stadium Stonebeach', icon: 'biathlon' },
-                { time: '14.00', title: '30m Kalja', place: 'Terrafame Environment Arena', icon: '30m-beer' },
+                { time: '11.00', title: 'Opening Event: Kaljakorin heitto', place: 'Kuirila Olympick Center', icon: 'kaljakori' },
+                { time: '12.00', title: 'Biathlon', place: 'Biathlon Stadium Stonebeach', icon: 'biathlon' },
+
+                { time: '13.00', title: 'Athlete Lunch', place: 'Ristorante Saaremaa' },
+
+                { time: '14.00', title: '30m Beer', place: 'Terrafame Environment Arena', icon: '30m-beer' },
                 { time: '15.00', title: 'Mäkihyppy K10', place: 'Garmisch-Ramppankirchen', icon: 'makihyppy' },
-                { time: '17.00', title: 'Mitalien jako', place: 'Lempi savusauna', icon: 'palkintojenjako' },
-                { time: '17.00', title: 'Marathon-sauna', place: 'Lempi savusauna' },
+                { time: '16.00', title: 'Closing Event: Olympicks Magnitude Beer Bong', place: 'Terrafame Environment Arena' },
+
+                { time: '17.00', title: 'Olympicks-Sauna Opens', place: 'Lempi puusauna' },
+                { time: '19.00', title: 'Dinner Buffet', place: 'Kiviranta Cockhouse' },
+                { time: '23.00', title: 'Award Ceremony', place: 'Restaurant Kanta Krouvi', icon: 'palkintojenjako' }
             ]
         },
 
         {
-            date: 'Sunnuntai 24.1',
+            date: 'Sunday 29.1',
             events: [
-                { time: '01.00', title: 'Mitalistien lehdistötilaisuus', place: 'Anniskeluravintola Kantis' },
-                { time: '9.00', title: 'Palauttelubrunssi', place: 'Kisakylän päärakennus' },
-                { time: '12.00', title: 'Päätöspalaveri' },
-                { time: '13.00', title: 'Järjestelytoimikunta kokoontuu' },
-                { time: '16.00', title: 'Kisakylä sulkeutuu' }
+                { time: '01.00', title: 'Winners\' Press Conference', place: 'Restaurant Kanta Krouvi' },
+                { time: '12.00', title: 'Hotel Check-out' },
+                { time: '14.00', title: 'Lost Property -point open' },
+                { time: '16.00', title: 'Olympicks Village closes' }
             ]
         }
     ];
